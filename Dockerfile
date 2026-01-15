@@ -1,13 +1,12 @@
 FROM almalinux:10
 
 RUN dnf up -y
-RUN dnf install -y ruby npm
+RUN dnf install -y ruby
 
+RUN dnf install -y npm
 RUN npm install -g @google/gemini-cli
-RUN mkdir /gemini
+RUN mkdir /opt/gemini
 
-WORKDIR /gemini
-COPY data/GEMINI.md GEMINI.md
+WORKDIR /opt/gemini
+COPY data/GEMINI.md /root/.gemini/GEMINI.md
 COPY data/settings.json /root/.gemini/settings.json
-
-CMD ["gemini", "--yolo"]
