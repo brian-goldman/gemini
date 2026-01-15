@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+exit 1 if not system('orb start')
+system(
+  'docker', 'build', '.',
+  '--tag', 'gemini:latest')

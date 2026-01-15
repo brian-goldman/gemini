@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+if not ARGV[0]
+  puts 'Specify a name.'
+  exit 1
+end
+
+exit 1 if not system('orb start')
+system(
+  'docker', 'run',
+  '--interactive', '--tty',
+  '--env-file', 'env',
+  '--name', ARGV[0],
+  'gemini:latest')
