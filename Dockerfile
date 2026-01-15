@@ -1,5 +1,3 @@
-# check=skip=SecretsUsedInArgOrEnv
-
 FROM almalinux:10
 
 RUN dnf up -y
