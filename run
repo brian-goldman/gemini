@@ -9,6 +9,5 @@ exit 1 if not system('orb start')
 system(
   'docker', 'run',
   '--interactive', '--tty',
-  '--env-file', 'env',
   '--name', ARGV[0],
   'gemini:latest')

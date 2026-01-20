@@ -9,4 +9,3 @@ RUN mkdir /opt/gemini
 
 WORKDIR /opt/gemini
 COPY data/GEMINI.md /root/.gemini/GEMINI.md
-COPY data/settings.json /root/.gemini/settings.json
