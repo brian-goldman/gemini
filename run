@@ -10,6 +10,5 @@ system(
   'docker', 'run',
   '--interactive', '--tty',
   '--env-file', 'env',
-  '--volume', 'gemini:/opt/gemini',
   '--name', ARGV[0],
   'gemini:latest')
